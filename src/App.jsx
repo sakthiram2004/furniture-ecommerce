@@ -24,6 +24,11 @@ import SignupPage from './components/auth/SignupPage'
 const App = () => {
   return (
     <BrowserRouter basename="/furniture-ecommerce">
+      {/* Navbar and global components */}
+      <NaveBar />
+      <NavCategorySlider />
+
+      {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category/:catname/:catid" element={<Products />} />
@@ -34,6 +39,9 @@ const App = () => {
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/cart" element={<CartPage />} />
       </Routes>
+
+      {/* Footer */}
+      <Footer />
     </BrowserRouter>
   )
 }
