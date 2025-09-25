@@ -35,7 +35,7 @@ const App = () => {
       <CartPage/>
       <CategorySlider/> */}
       
-    <BrowserRouter basename="/ecommerce">
+    <BrowserRouter basename="/furniture-ecommerce">
   <Routes>
     <Route element={<Home />} path="/" />
     <Route element={<Products />} path="/category/:catname/:catid" />
