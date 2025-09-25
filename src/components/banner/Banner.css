@@ -1,0 +1,46 @@
+.banner-container {
+  position: relative;
+  margin: 1em;
+}
+
+.banner-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  scroll-behavior: smooth;
+}
+
+.banner-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.banner-image {
+  min-width: 95%;
+  height: 15em;
+  object-fit: cover;
+  margin: 0.5em;
+  border-radius: 1em;
+  flex-shrink: 0;
+}
+
+.banner-back-arrow,
+.banner-right-arrow {
+  font-size: 2em;
+  position: absolute;
+  top: 45%;
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0px 0px 5px gray;
+  z-index: 10;
+}
+
+.banner-back-arrow {
+  left: 0.5em;
+}
+
+.banner-right-arrow {
+  right: 0.5em;
+}

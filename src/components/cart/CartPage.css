@@ -1,0 +1,21 @@
+.cart-page {
+  padding: 2em;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+th, td {
+  padding: 0.8em;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+button {
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 0.5em;
+  background: green;
+  color: white;
+  font-weight: bold;
+}

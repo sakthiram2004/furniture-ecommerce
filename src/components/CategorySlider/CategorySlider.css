@@ -1,0 +1,29 @@
+.category-slider {
+  overflow-x: auto;       /* Enables horizontal scrolling */
+  white-space: nowrap;    /* Prevents wrapping */
+  padding: 1em;
+  scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+.category-slider::-webkit-scrollbar {
+  display: none;          /* Hide scrollbar for Chrome/Safari */
+}
+
+.category-list {
+  display: flex;
+  gap: 1em;               /* spacing between items */
+}
+
+.category-item {
+  background: #007bff;
+  color: white;
+  padding: 0.5em 1.5em;
+  border-radius: 1.5em;
+  font-size: 0.9em;
+  cursor: pointer;
+  flex-shrink: 0;          /* prevent items from shrinking */
+  transition: background 0.3s ease;
+}
+
+.category-item:hover {
+  background: #0056b3;
+}

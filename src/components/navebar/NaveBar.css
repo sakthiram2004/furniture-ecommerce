@@ -1,0 +1,48 @@
+.logo {
+  width: 40px;
+  margin-right: 1em;
+}
+
+.topnav {
+  padding: 0.8em 2em;
+  display: flex;
+  align-items: center;
+  background: blue;
+  color: whitesmoke;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  height: 40px; 
+  background-color: white;
+  border-radius: 1em;
+  padding: 0 0.5em;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.search-button {
+  color: blue;
+  cursor: pointer;
+}
+
+.top-menu-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.favorate-button,
+.cart-button,
+.profile-button {
+  font-size: 1.5em;
+  cursor: pointer;
+}
