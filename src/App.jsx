@@ -1,32 +1,25 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 // Components
-import NaveBar from './components/navebar/NaveBar'
-import NavCategorySlider from './components/CategorySlider/CategorySlider'
-import Banner from './components/banner/Banner'
-import ShowProducts from './components/show-products/ShowProducts'
-import Footer from './components/footer/Footer'
-import ProductPage from './components/product-page/ProductPage'
-import ProductList from './components/productlist/ProductList'
-import ProfilePage from './components/profile/ProfilePage'
-import FavoritesPage from './components/favor/FavoritesPage'
-import CartPage from './components/cart/CartPage'
-import CategorySlider from './components/CategorySlider/CategorySlider'
+import NaveBar from "./components/navebar/NaveBar.jsx"
+import NavCategorySlider from "./components/CategorySlider/CategorySlider.jsx"
+import Footer from "./components/footer/Footer.jsx"
+import ProfilePage from "./components/profile/ProfilePage.jsx"
+import FavoritesPage from "./components/favor/FavoritesPage.jsx"
+import CartPage from "./components/cart/CartPage.jsx"
 
 // Pages
-import Home from './pages/Home'
-import Products from './pages/Products'
-import ProductDetails from './pages/ProductDetails'
-import LoginPage from './components/auth/LoginPage'
-import SignupPage from './components/auth/SignupPage'
+import Home from "./pages/Home"
+import Products from "./pages/Products"
+import ProductDetails from "./pages/ProductDetails"
+import LoginPage from "./components/auth/LoginPage"
+import SignupPage from "./components/auth/SignupPage"
 
 const App = () => {
   return (
     <BrowserRouter basename="/furniture-ecommerce">
-      {/* Navbar and global components */}
-      <NaveBar />
-      <NavCategorySlider />
+    
 
       {/* Routes */}
       <Routes>
