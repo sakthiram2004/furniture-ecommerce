@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import {baseurl} from "./../../configfile.js"
 import "./AuthPage.css";
 
 const LoginPage = () => {
@@ -13,7 +14,7 @@ const LoginPage = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:8081/api/v1/auth/login", {
+      const response = await fetch(`${baseurl}api/v1/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -24,7 +25,7 @@ const LoginPage = () => {
 
       if (response.ok) {
         // Check if user is really logged in by fetching /me
-        const meResponse = await fetch("http://localhost:8081/api/v1/auth/me", {
+        const meResponse = await fetch(`${baseurl}api/v1/auth/me`, {
           method: "GET",
           credentials: "include"
         });

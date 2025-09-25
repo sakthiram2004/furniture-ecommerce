@@ -1,6 +1,6 @@
 import  { useEffect, useState,React } from "react";
 import "./CategorySlider.css";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";import {baseurl} from "./../../configfile.js"
 
 const CategorySlider = () => {
   const [categories, setCategories] = useState([]);
@@ -8,7 +8,7 @@ const CategorySlider = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost:8081/api/v1/categories");
+        const response = await fetch(`${baseurl}api/v1/categories`);
         if (!response.ok) {
           throw new Error("Failed to fetch categories");
         }

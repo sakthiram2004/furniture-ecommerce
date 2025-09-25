@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ShowProducts.css';
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";import {baseurl} from "./../../configfile.js"
 
 const screenWidth = window.innerWidth;
 
@@ -14,7 +14,7 @@ const ShowProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:8081/api/user/productvariant/all");
+        const response = await fetch(`${baseurl}api/user/productvariant/all`);
         const data = await response.json();
 
         if (Array.isArray(data.data)) {
@@ -23,7 +23,7 @@ const ShowProducts = () => {
             data.data.map(async (product) => {
               try {
                 const imgResponse = await fetch(
-                  `http://localhost:8081/api/user/productvariant/image/variant/${product.id}`
+                  `${baseurl}api/user/productvariant/image/variant/${product.id}`
                 );
                 const imgData = await imgResponse.json();
 

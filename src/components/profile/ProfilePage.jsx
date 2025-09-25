@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './ProfilePage.css';
+import './ProfilePage.css';import {baseurl} from "./../../configfile.js"
 
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
@@ -29,7 +29,7 @@ const ProfilePage = () => {
 
  const handleLogout = async () => {
   try {
-    await fetch('http://localhost:8081/api/v1/auth/logout', {
+    await fetch(`${baseurl}api/v1/auth/logout`, {
       method: 'POST',
       credentials: 'include', // important to include cookies
     });

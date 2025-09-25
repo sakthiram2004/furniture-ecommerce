@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';import {baseurl} from "./../../configfile.js"
 import './ProductPage.css';
 
 const ProductPage = ({ id }) => {
@@ -13,13 +13,13 @@ const ProductPage = ({ id }) => {
       if (!id) return;
       try {
         const response = await fetch(
-          `http://localhost:8081/api/user/productvariant/${id}`
+          `${baseurl}api/user/productvariant/${id}`
         );
         const data = await response.json();
         if (data.data) setProduct(data.data);
 
         const imageresponse = await fetch(
-          `http://localhost:8081/api/user/productvariant/image/variant/${id}`
+          `${baseurl}api/user/productvariant/image/variant/${id}`
         );
         const imagedata = await imageresponse.json();
         if (Array.isArray(imagedata.data)) {

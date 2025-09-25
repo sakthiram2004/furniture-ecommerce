@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";import {baseurl} from "./../../configfile.js"
 import './Banner.css';
 
 const screenWidth = window.innerWidth;
@@ -11,7 +11,7 @@ const Banner = () => {
   useEffect(() => {
     const fetchBanners = async () => {
       try {
-        const response = await fetch('http://localhost:8081/api/v1/banners', {
+        const response = await fetch(`${baseurl}api/v1/banners`, {
           method: 'GET',
           credentials: 'include'
         });

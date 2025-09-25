@@ -3,7 +3,7 @@ import './Navebar.css';
 import { FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import logo from './../../assets/logo.png';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';import {baseurl} from "./../../configfile.js"
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
@@ -12,7 +12,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch('http://localhost:8081/api/v1/auth/me', {
+        const response = await fetch(`${baseurl}api/v1/auth/me`, {
           method: 'GET',
           credentials: 'include', // send cookies
         });

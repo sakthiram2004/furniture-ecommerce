@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";import {baseurl} from "./../../configfile.js"
 import "./AuthPage.css";
 
 const SignupPage = () => {
@@ -22,7 +22,7 @@ const SignupPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8081/api/v1/auth/create", {
+      const response = await fetch(`${baseurl}api/v1/auth/create`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, mobileNo, password }),

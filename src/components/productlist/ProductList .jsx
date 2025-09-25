@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ProductList.css";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";import {baseurl} from "./../../configfile.js"
 
 const ProductList = ({ name, id }) => {
   const [products, setProducts] = useState([]);
@@ -12,7 +12,7 @@ const ProductList = ({ name, id }) => {
       setLoading(true); // start loading
       setError(null);   // reset error
       try {
-        const response = await fetch(`http://localhost:8081/api/user/productvariant/category/${id}`);
+        const response = await fetch(`${baseurl}api/user/productvariant/category/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }
